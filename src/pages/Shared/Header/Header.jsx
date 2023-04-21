@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../../../assets/logo.png";
 import moment from "moment/moment";
 import Marquee from "react-fast-marquee";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div>
@@ -39,17 +40,19 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <Link to={"/"} className="nav-link">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Link
-                </a>
+                <Link to={"/about"} className="nav-link">
+                  About
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link">Disabled</a>
+                <Link to={"/career"} className="nav-link">
+                  Career
+                </Link>
               </li>
             </ul>
             <p className="me-3">Profile</p>
